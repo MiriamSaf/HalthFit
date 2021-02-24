@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--name of page on top-->
+    <title>HalthFit</title>
+    <!--"Font Awesome". 2021. Fontawesome.Com. https://fontawesome.com/.-->
+    <script
+      src="https://kit.fontawesome.com/dca59f28e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--"Epilogue - Google Fonts". 2021. Google Fonts. https://fonts.google.com/specimen/Epilogue?preview.text_type=custom.-->
+    <!--import Google font Epilogue-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <!--"Abel - Google Fonts". 2021. Google Fonts. https://fonts.google.com/specimen/Abel?preview.text_type=custom&query=abel.-->
+    <!-- Import Google font Abel-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Piscitelli, Nick. 2021. "Nickpiscitelli/Glider.Js". Github. https://github.com/NickPiscitelli/Glider.js.-->
+    <!--import glider stylesheet-->
+    <link rel="stylesheet" href="/styles/glider.min.css" />
+    <!--"Alvarotrigo/Fullpage.Js". 2021. Github. https://github.com/alvarotrigo/fullpage.js.-->
+    <!--full page js css cdn-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
+      integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w=="
+      crossorigin="anonymous"
+    />
+    <!--"Animate.Css | A Cross-Browser Library Of CSS Animations.". 2021. Animate.Style. https://animate.style/.-->
+    <!--link to animate css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--"Shoelace". 2021. Shoelace.Style. https://shoelace.style/components/.-->
+    <!--link to shoelace-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.26/dist/shoelace/shoelace.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.26/dist/shoelace/shoelace.esm.js"
+    ></script>
+    <!--link to own stylesheet-->
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <div id="fullpage">
+      <!--Section Home -->
+      <div class="section section-home" id="section-homepg">
+        <!--menu hamburger icon-->
+        <i class="fas fa-bars" id="menu-icon"></i>
+        <!-- fit man background image -->
+        <img
+          src="/images/home-screen.png"
+          alt="Fit man tying shoelace"
+          id="home-fit-image"
+        />
+
+        <!--SHOELACE menu drawer-->
+        <sl-drawer label="MENU" class="drawer-overview">
+          <!--menu titles-->
+          <h3 class="menu-titles menu-home" id="menu-1">HOME</h3>
+
+          <h3 class="menu-titles menu-awesome" id="menu-2">LIVE AWESOME</h3>
+
+          <h3 class="menu-titles menu-learn">LEARN HOW</h3>
+
+          <h3 class="menu-titles menu-test">TAKE THE TEST</h3>
+
+          <h3 class="menu-titles menu-review">REVIEWS</h3>
+
+          <h3 class="menu-titles menu-contact">CONTACT</h3>
+
+          <sl-button slot="footer" type="primary" class="mnu-btn"
+            >Close</sl-button
+          >
+        </sl-drawer>
+        <!--logo image halthfit-->
+        <img
+          src="/images/logo.png"
+          alt="logo"
+          id="logo-home"
+          class="menu-home"
+        />
+        <!--title words home pg-->
+        <h1 class="h1-head home-title">do you desire</h1>
+      </div>
+      <!--close first page home-->
+
+      <!-- 2nd screen - Reasons -->
+      <div class="section section-rsn">
+        <!--background div-->
+        <div class="bg"></div>
+        <div class="content">
+          <!--title for reasons pg-->
+          <h1 class="h1-head reasons-title">to live awesome?</h1>
+
+          <sl-tooltip content="You'll feel life pulsing through your bones">
+            <div class="circle" id="bottom-1"></div>
+            <div class="circle-outline pulse-1" id="bottom-2"></div>
+            <div class="circle-outline pulse-1" id="bottom-3"></div>
+            <div class="circle-outline pulse-1" id="bottom-4"></div>
+          </sl-tooltip>
+
+          <sl-tooltip
+            content="You'll have the strength for everything you love"
+          >
+            <div class="circle" id="rasberry-1"></div>
+            <div class="circle-outline pulse-1" id="rasberry-2"></div>
+            <div class="circle-outline pulse-1" id="rasberry-3"></div>
+            <div class="circle-outline pulse-1" id="rasberry-4"></div>
+          </sl-tooltip>
+
+          <sl-tooltip content="You can tackle any challenge you face">
+            <div class="circle" id="shake-1"></div>
+            <div class="circle-outline pulse-1" id="shake-2"></div>
+            <div class="circle-outline pulse-1" id="shake-3"></div>
+            <div class="circle-outline pulse-1" id="shake-4"></div>
+          </sl-tooltip>
+        </div>
+        <!--close content-->
+      </div>
+      <!--close screen 2 - reasons-->
+
+      <!--screen 3 -live awesome slider section -->
+      <div class="section section-slider section-all" id="section-liveawesome">
+        <!--slide 1 - nutrition-->
+        <div class="slide">
+          <div class="content">
+            <!--div that holds the slide image and the circle divs-->
+            <div id="slide-img-hold">
+              <div class="crcl-right">
+                <p>
+                  Adhering to a nutritious <br />lifestyle and eating well helps
+                  to keep up good health and wellbieng. Benefits include
+                  lowering your risk of many diseases and keeping blood sugar
+                  down. Choose colourful fruits and veggies and foods dense with
+                  nutrients. We guarantee that you'll feel <br />awesome.
+                </p>
+              </div>
+
+              <div class="crcl-right-outline"></div>
+              <div class="crcle-left"></div>
+              <div class="crcle-left-outline"></div>
+
+              <h1 class="slide-ttle">choose nutrition</h1>
+
+              <sl-dialog
+                label="Choose Nutrition"
+                class="dialog-overview-1"
+                id="dialog-popup"
+              >
+                Adhering to a nutritious lifestyle and eating well helps to keep
+                up good health and wellbieng. Benefits include lowering your
+                risk of many diseases and keeping blood sugar down. Choose
+                colourful fruits and veggies and <br />foods dense with
+                nutrients. We <br />guarantee that you'll feel awesome.
+                <sl-button slot="footer" type="primary" id="close-dialog"
+                  >Close</sl-button
+                >
+              </sl-dialog>
+              <sl-button class="read-more-btn">Read More</sl-button>
+
+              <i class="fas fa-angle-right next-slide-r-icon"></i>
+            </div>
+          </div>
+        </div>
+        <!--slide 2  - life -->
+        <div class="slide">
+          <div class="content">
+            <!--div that holds the slide image and the circle divs-->
+            <div id="slide-img-hold-jog">
+              <div class="crcl-right">
+                <p>
+                  Living healthy and caring <br />
+                  about your lifestyle benefits your mental and physical health.
+                  You'll <br />feel good about yourself and boost your self
+                  esteem along the way. Your quality of life increases as fast
+                  foods and negative habits decrease. Nothing feels as awesome
+                  as taking control of <br />
+                  your future.
+                </p>
+              </div>
+              <div class="crcl-right-outline"></div>
+              <div class="crcle-left"></div>
+              <div class="crcle-left-outline"></div>
+
+              <h1 class="slide-ttle">choose life</h1>
+
+              <sl-dialog
+                label="Choose Life"
+                class="dialog-overview-2"
+                id="dialog-popup"
+              >
+                <p>
+                  Living healthy and caring about your lifestyle benefits your
+                  mental and physical health. You'll feel good about yourself
+                  and boost your self esteem along the way. Your quality of life
+                  increases as fast foods and negative habits decrease. Nothing
+                  feels as awesome <br />as taking control of your future.
+                </p>
+                <sl-button slot="footer" type="primary" id="close-dialog"
+                  >Close</sl-button
+                >
+              </sl-dialog>
+              <sl-button class="read-more-btn">Read More</sl-button>
+
+              <i class="fas fa-angle-left prev-slide-l-btn"></i>
+              <i class="fas fa-angle-right next-slide-r-icon"></i>
+            </div>
+          </div>
+        </div>
+        <!--close slide 2 div-->
+        <!--slide 3 - friends-->
+        <div class="slide">
+          <div class="content">
+            <div id="slide-img-hold-friends">
+              <div class="crcl-right">
+                <p>
+                  Choosing health is a reality <br />and a mindset you'll adopt.
+                  <br />You must reach out to like-minded friends and family.
+                  They will help to support you along your incredible journey.
+                  Connect with those that bring out the best in you. They will
+                  ensure that your healthy habits <br />last to become a true
+                  part of <br />you.
+                </p>
+              </div>
+              <div class="crcl-right-outline"></div>
+              <div class="crcle-left"></div>
+              <div class="crcle-left-outline"></div>
+              <h1 class="slide-ttle">choose laughter</h1>
+
+              <sl-dialog
+                label="Choose Laughter"
+                class="dialog-overview-3"
+                id="dialog-popup"
+              >
+                <p>
+                  Choosing health is a reality and a mindset you'll adopt. You
+                  must reach out to like-minded friends and family. They will
+                  help to support you along your incredible journey. Connect
+                  with those that bring out the best in you. They will ensure
+                  that your healthy habits last to become a true part of you.
+                </p>
+                <sl-button slot="footer" type="primary" id="close-dialog"
+                  >Close</sl-button
+                >
+              </sl-dialog>
+              <sl-button class="read-more-btn" id="laughter-pg-btn"
+                >Read More</sl-button
+                >
+
+              <i class="fas fa-angle-left prev-slide-l-btn"></i>
+              <i class="fas fa-angle-right next-slide-r-icon"></i>
+            </div>
+          </div>
+        </div>
+        <!--slide 4 -rest-->
+        <div class="slide">
+          <div class="content">
+            <!--div that holds the slide image and the circle divs-->
+
+            <div id="slide-img-hold-rest">
+              <div class="crcl-right">
+                <p>
+                  Ensuring that you get a good <br />nights sleep is one of the
+                  best things you can do for your health and wellbeing. Sleep
+                  can help give your immune system a boost and strengthen your
+                  heart. Restful sleep equals a better mood and prevents weight
+                  gain. Sleep also improves your memory. Now <br />that sounds
+                  awesome!
+                </p>
+              </div>
+              <div class="crcl-right-outline"></div>
+              <div class="crcle-left"></div>
+              <div class="crcle-left-outline"></div>
+              <h1 class="slide-ttle">choose rest</h1>
+              <i class="fas fa-angle-left prev-slide-l-btn"></i>
+              <sl-dialog
+                label="Choose Rest"
+                class="dialog-overview-4"
+                id="dialog-popup"
+              >
+                <p>
+                  Ensuring that you get a good nights sleep is one of the best
+                  things you can do for your health and wellbeing. Sleep can
+                  help give your immune system a boost and strengthen your
+                  heart. Restful sleep equals a better mood and prevents weight
+                  gain. Sleep also<br />
+                  improves your memory. Now that sounds awesome!
+                </p>
+                <sl-button slot="footer" type="primary">Close</sl-button>
+              </sl-dialog>
+
+              <sl-button class="read-more-btn">Read More</sl-button>
+              <!--<i class = "fas fa-angle-right next-slide-r-icon"></i>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--close slider bIG div-->
+
+      <!--test section-->
+      <div class="section section-test" id="section-testqs">
+        <!--heading of test section-->
+        <h1 id="test-header">I'll take the test</h1>
+        <div id="test-box">
+          <!--Quiz created and adapted using Interact 
+        "Interact | Quiz". 2021. Dashboard.Tryinteract.Com. https://dashboard.tryinteract.com/app/build/602d3c3d4199070017f432d8.
+        -->
+          <iframe
+            id="interactApp602d3c3d4199070017f432d8"
+            allowTransparency="true"
+            frameborder="0"
+            src="https://quiz.tryinteract.com/#/602d3c3d4199070017f432d8?method=iframe"
+          ></iframe>
+        </div>
+        <!--close test section div-->
+      </div>
+      <!--CLOSE TEST SECTION-->
+
+      <!--Reviews from user section-->
+      <div class="section review">
+        <h1 id="review-header">User Reviews</h1>
+        <!--GLider adapted from tutorial
+          Creating Sliders And Carousels With Glider.Js (Only 2.5Kb Gzipped!). 2018. Video. 
+          https://www.youtube.com/watch?v=FT9e8EQi8ys.-->
+        <div class="glider-contain multiple">
+          <button class="glider-prev">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <!--slide in and out element-->
+          <div class="glider">
+            <!--figure 1-->
+            <figure>
+              <blockquote>
+                <img
+                  src="/images/manPic1BW.jpg"
+                  alt="picture of man serious expression"
+                />
+                "HalthFit is my guardian angel. Before I came in contact with
+                them, I suffered from migraines and lack of motivation. With
+                their help, I changed my lifestyle habits and feel like I was
+                born anew!"
+              </blockquote>
+              <figcaption>Nevuch Adnezer</figcaption>
+            </figure>
+            <!--figure 2 -->
+            <figure>
+              <blockquote>
+                <img src="/images/girl1BW.jpg" alt="lady black and white pic" />
+                "I used to rely on coffee to keep me going. The crutch didn't
+                last and my doctor recommended that I sign up to HalthFit to get
+                my life on track. After 2 months of their support, I couldn't be
+                happier"
+              </blockquote>
+              <figcaption>Debbie Rashah</figcaption>
+            </figure>
+            <!--figure 3-->
+            <figure>
+              <blockquote>
+                <img
+                  src="/images/youngGirlBW.jpg"
+                  alt="young girl smiling black and white"
+                />
+                "Being in Uni is really awesome, but boy is it hard for me to
+                focus on my physical and emotional health. HalthFit helps me
+                stay motivated and remember what my overaching goals are."
+              </blockquote>
+              <figcaption>Vashti Moves</figcaption>
+            </figure>
+            <!--figure 4-->
+            <figure>
+              <blockquote>
+                <img
+                  src="/images/manYesBW.jpg"
+                  alt="man closing eyes black and white"
+                />
+                "HalthFit is my powerup for the day. I go on my morning jog, eat
+                breakfast and read the latest inspo. I love choosing the best
+                and being part of such an awesome community so devoted to good."
+              </blockquote>
+              <figcaption>Titus Emp</figcaption>
+            </figure>
+            <!--figure 5-->
+            <figure>
+              <blockquote>
+                <img
+                  src="/images/girlSunniesBW.jpg"
+                  alt="girl laughing black and white"
+                />
+                "I used to suffer from chronic aiches and pains. I realised it
+                was due to my unhealthy sleeping and eating habits. After I
+                signed up, a new world opened up to me. HalthFit is now my
+                lifeline and inspiration."
+              </blockquote>
+              <figcaption>Basya Hamitzri</figcaption>
+            </figure>
+          </div>
+          <button class="glider-next">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+          <div id="dots" class="glider-dots"></div>
+        </div>
+      </div>
+      <!--close review section-->
+
+      <!--footer contact section-->
+      <div class="section">
+        <div class="footer-bg">
+          <h1 class="footer-header">I choose life</h1>
+          <h2 class="footer-h2">
+            life is up for grabs, how you shape it is up to you
+          </h2>
+
+          <div id="box-foot">
+            <h3 class="footer-h3">Sign me up</h3>
+            <form>
+              <!--form inputs-->
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="first name"
+              />
+              <input
+                type="text"
+                id="sur-name"
+                name="sur-name"
+                placeholder="surname"
+              /><br /><br />
+              <input type="email" id="email" name="email" placeholder="email" />
+              <!-- button has a click event that shows the SVG animation, indicating loading of the form-->
+              <button onclick="showSVG()" type="button" id="signUpBtn">
+                Sign up
+              </button>
+
+              <!--loader created with the help of the following tutorial
+            Purdila, Adi. 2021. "How To Create A Loader Icon With SVG Animation". Web Design Envato Tuts+. 
+            https://webdesign.tutsplus.com/tutorials/how-to-create-a-loader-icon-with-svg-animations--cms-31542.
+            -->
+              <!-- SVG loader with 3 rectangles that will change height with slight delay -->
+              <!--on click will show original button-->
+              <svg
+                onclick="showBtn()"
+                width="51px"
+                height="50px"
+                viewBox="0 0 51 50"
+                id="rectSVG"
+              >
+                <rect y="0" width="10" height="50" fill="#d90479">
+                  <animate
+                    attributeName="height"
+                    values="50;10;50"
+                    begin="0s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                  <animate
+                    attributeName="y"
+                    values="0;20;0"
+                    begin="0s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                </rect>
+                <rect x="16" y="0" width="10" height="50" fill="#FB379C">
+                  <animate
+                    attributeName="height"
+                    values="50;10;50"
+                    begin="0.2s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                  <animate
+                    attributeName="y"
+                    values="0;20;0"
+                    begin="0.2s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                </rect>
+
+                <rect x="32" y="0" width="10" height="50" fill="#F5C0DE">
+                  <animate
+                    attributeName="height"
+                    values="50;10;50"
+                    begin="0.4s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                  <animate
+                    attributeName="y"
+                    values="0;20;0"
+                    begin="0.4s"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animate>
+                </rect>
+              </svg>
+            </form>
+          </div>
+
+          <!--bottom footer-->
+          <div id="bottom-footer">
+            <h2 id="bott-foot-h2">
+              choose awesome
+              <div>
+                <!--shoelace social media icons-->
+                <sl-icon name="twitter"></sl-icon>
+                <sl-icon name="instagram"></sl-icon>
+                <sl-icon name="facebook"></sl-icon>
+                <sl-icon name="envelope"></sl-icon>
+              </div>
+            </h2>
+            <!--close h2-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end full page div-->
+
+    <!--full page scripts-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"
+      integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.extensions.min.js"
+      integrity="sha512-2whoeiZFzA/g6YGH/nI7iXRQlMPYLECQYLFYKXxqigVzCQYAMvQ1v+oy8TYN5ccbyeyG55mjdMjI7CQSN25B0g=="
+      crossorigin="anonymous"
+    ></script>
+    <!--"GSAP". 2021. Greensock. https://greensock.com/gsap/.-->
+    <!--gsap scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <!--glider script-->
+    <script src="/scripts/glider.min.js"></script>
+    <!--link to our own script js file-->
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>
