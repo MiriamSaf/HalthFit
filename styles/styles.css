@@ -1,0 +1,1548 @@
+/*page styling---------------*/
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /*font-family: "Epilogue", sans-serif;*/
+  font-family: "Abel", sans-serif;
+}
+
+.h1-head {
+  /*font-family: "Epilogue", sans-serif;*/
+  color: #ff9f1c;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 100;
+  color: #ff9f1c;
+}
+
+/*shoelace hacks-----------*/
+:root {
+  --sl-tooltip-arrow-size: 0;
+}
+
+/*fullpage hacks ---------*/
+/*nav*/
+#fp-nav ul li .fp-tooltip {
+  color: #333;
+  font-family: "Epilogue", sans-serif;
+}
+
+/*makes section at 100*/
+.section {
+  height: 100vh;
+}
+
+/*styles navs buttons position in slides*/
+.fp-slidesNav {
+  /*center the buttons*/
+  text-align: center !important;
+  bottom: 18% !important;
+}
+
+/*home screen ------------------------
+------------------------------------*/
+
+/*home screen width*/
+.section-home {
+  width: 100%;
+}
+
+/*image in back of home screen*/
+#home-fit-image {
+  top: -7%;
+  height: 109%;
+  /*Center and scale the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  opacity: 0.9;
+  position: absolute;
+}
+
+/*h1 of home page*/
+.home-title {
+  position: relative;
+  width: 100%;
+  top: 38%;
+  font-weight: 600;
+  font-size: 16vw;
+  left: 1vh;
+  text-shadow: 0.5px 0.5px 0.55px rgba(0, 0, 0, 0.1);
+  transition: all ease 0.3s;
+}
+
+/*shadow increases on hover*/
+.home-title:hover {
+  text-shadow: 0.5px 0.5px 0.55px rgba(0, 0, 0, 0.9);
+}
+
+/*logo style*/
+#logo-home {
+  left: 2vh;
+  top: 2vh;
+  position: fixed;
+  z-index: 2;
+  width: 12vh;
+  height: 12vh;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+#logo-home:hover {
+  animation: tada; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+/*menu hamburger*/
+.fa-bars {
+  color: #686963;
+  right: 4vh;
+  top: 3vh;
+  z-index: 99;
+  position: fixed;
+  font-size: 3.5vh;
+  transition: all ease 0.3s;
+}
+
+/*hamburger menu hover state*/
+.fa-bars:hover {
+  cursor: pointer;
+  color: #d90479;
+}
+
+/*shoelace drawer*/
+sl-drawer {
+  font-family: "Abel", sans-serif;
+}
+
+/*menu shoelace close button*/
+.drawer-overview::part(close-button) {
+  color: #686963;
+  font-size: 4.8vh;
+  transition: ease 0.3s;
+}
+
+/*styles close button hover state menu*/
+.drawer-overview::part(close-button):hover {
+  color: #d90479;
+}
+
+/*styles title of drawer*/
+.drawer-overview::part(title) {
+  color: #d90479;
+  font-size: 4.5vh;
+  margin-left: 4vh;
+}
+
+/*styles shoelace button in menu*/
+.mnu-btn::part(base) {
+  background: #686963;
+  border: solid 1px #686963;
+  font-family: "Abel", sans-serif;
+  transition: ease 0.3s;
+}
+
+/*styles shoelace button in menu hover state*/
+.mnu-btn::part(base):hover {
+  background: #d90479;
+  border: solid 1px #d90479;
+}
+
+/*menu headings style*/
+.menu-titles {
+  color: #686963;
+  font-size: 3.5vh;
+  font-weight: 200;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  margin-left: 4vh;
+  transition: all ease 0.3s;
+}
+
+/*menu titles hover state*/
+.menu-titles:hover {
+  cursor: pointer;
+  color: #d90479;
+  font-weight: 600;
+}
+
+/*reasons screen - 2----------------
+----------------------------------*/
+
+/*background img reason section*/
+.section-rsn .bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  background: url("/images/fruit-wide.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*the reason section*/
+.section-rsn {
+  width: 100%;
+}
+
+/*page 2 title*/
+.reasons-title {
+  font-weight: 600;
+  font-size: 10vw;
+  color: #ff9f1c;
+  position: absolute;
+  width: 100%;
+  top: -19vh;
+  left: 1vh;
+  text-shadow: 0.5px 0.5px 0.55px rgba(0, 0, 0, 0.1);
+}
+
+/*container for where circle is positioned*/
+.circle {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  opacity: 1;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/*specific spot for bottom circle*/
+#bottom-1 {
+  left: 81vh;
+  top: 25vh;
+}
+
+/*outline of circle*/
+.circle-outline {
+  height: 45px;
+  width: 45px;
+  border: 1px solid #ff9f1c;
+  background-color: #ff9f1c;
+  border-radius: 50%;
+  z-index: 99;
+  position: absolute;
+  animation: circlePulse 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+}
+
+/*bottom circles*/
+#bottom-2 {
+  left: 79.8vh;
+  top: 71.5vh;
+  animation-delay: -0.5s;
+}
+
+#bottom-3 {
+  animation-delay: -2s;
+  left: 79.8vh;
+  top: 71.5vh;
+}
+
+#bottom-4 {
+  animation-delay: -1s;
+  left: 79.8vh;
+  top: 71.5vh;
+}
+/*circle by rasberry*/
+#rasberry-1 {
+  left: 140vh;
+  top: -25vh;
+}
+
+#rasberry-2 {
+  left: 140vh;
+  top: 24.5vh;
+  animation-delay: -0.5s;
+}
+
+#rasberry-3 {
+  left: 140vh;
+  top: 24.5vh;
+  animation-delay: -2s;
+}
+
+#rasberry-4 {
+  left: 140vh;
+  top: 24.5vh;
+  animation-delay: -1s;
+}
+/*circle by shake*/
+#shake-1 {
+  left: 126vh;
+  top: -2vh;
+}
+
+#shake-2 {
+  left: 126vh;
+  top: 50vh;
+  animation-delay: -0.5s;
+}
+
+#shake-3 {
+  left: 126vh;
+  top: 50vh;
+  animation-delay: -2s;
+}
+
+#shake-4 {
+  left: 126vh;
+  top: 50vh;
+  animation-delay: -1s;
+}
+
+#rasberry-4:hover,
+#rasberry-3:hover,
+#rasberry-1:hover,
+.circle:hover,
+.circle-outline:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+  background-color: #f6e8ea;
+  /*animation: circlePulse;*/
+}
+
+#rasberry-2:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/*pause animation on hover*/
+.circle-outline:hover {
+  animation-play-state: paused;
+}
+
+.circle:hover {
+  animation-play-state: paused;
+}
+
+/*animation adapted from 
+Chinnathambi, Kirupa. 2021. "Creating A Pulsing Circle Animation". 
+Kirupa.Com. https://www.kirupa.com/animations/creating_pulsing_circle_animation.htm.
+*/
+/*animation for circles*/
+@keyframes circlePulse {
+  from {
+    transform: scale(0.5, 0.5);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.9, 1.9);
+    opacity: 0.1;
+    color: #d90479;
+  }
+}
+
+/*style for shoelace tooltip*/
+sl-tooltip::part(base) {
+  background-color: palevioletred;
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+}
+
+/*select imgs*/
+.reasons-cols .reason-sm-col .reason-img {
+  width: 40%;
+  /*lock the height to txt will be in same line*/
+  height: 160px;
+  /*stop the distortion by containing the img in this area*/
+  object-fit: contain;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+/*SLIDER styles----------------
+------------------------------*/
+.section-slider {
+  background: #f6e8ea;
+  position: relative;
+}
+
+/*dialog box*/
+sl-dialog {
+  display: none;
+}
+
+.content .read-more-btn,
+.content .read-jog-btn {
+  display: none;
+}
+
+/*header text*/
+.content .slide-ttle {
+  z-index: 1;
+  color: #686963;
+  font-weight: 600;
+  font-size: 9.5vw;
+  bottom: 10vh;
+  position: relative;
+  text-align: center;
+}
+
+.slide-img {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180vh;
+  height: 100vh;
+  bottom: 10%;
+  object-fit: contain;
+}
+
+/*right circle*/
+.crcl-right {
+  height: 400px;
+  width: 400px;
+  background-color: #f6e8ea;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  top: -62px;
+  left: -81px;
+}
+
+/*circle right paragrah*/
+.crcl-right p {
+  margin-top: 10.4vh;
+  margin-left: 12.3vh;
+  font-size: 2.75vh;
+  text-align: left;
+  line-height: 21pt;
+  color: #333;
+  font-family: "Epilogue", sans-serif;
+}
+
+/*right circle outline*/
+.crcl-right-outline {
+  height: 460px;
+  width: 460px;
+  border: 8px solid #f6e8ea;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  top: -14vh;
+  margin-left: -17vh;
+}
+
+/*semi circle left outline*/
+.crcle-left-outline {
+  border-radius: 0 0 150px 150px;
+  border: 8px solid #f6e8ea;
+  height: 300px;
+  width: 337px;
+  left: 159vh;
+  bottom: -30px;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+
+/*left semi circle*/
+.crcle-left {
+  height: 230px;
+  width: 300px;
+  background-color: #f6e8ea;
+  z-index: 1;
+  position: absolute;
+  bottom: 1px;
+  border-radius: 0 0 150px 150px;
+  transform: rotate(90deg);
+  left: 160vh;
+}
+
+/*styles img holder div - first slide*/
+#slide-img-hold {
+  background: url("/images/breakfast.jpg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  text-align: center;
+  width: 190vh;
+  height: 78vh;
+  margin-top: -5.25%;
+  margin-left: 1%;
+}
+
+/*second slide background*/
+#slide-img-hold-jog {
+  background: url("/images/exercise-by-beach.jpg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  text-align: center;
+  width: 190vh;
+  height: 78vh;
+  margin-top: -5.25%;
+  margin-left: 1%;
+}
+
+/*third slide background -friends*/
+#slide-img-hold-friends {
+  background: url("/images/friends-front.jpg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  text-align: center;
+  width: 190vh;
+  height: 78vh;
+  margin-top: -5.25%;
+  margin-left: 1%;
+}
+
+/*fourth slide background-rest*/
+#slide-img-hold-rest {
+  background: url("/images/clock@bed.png");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  text-align: center;
+  width: 190vh;
+  height: 78vh;
+  margin-top: -5.25%;
+  margin-left: 1%;
+}
+
+/*left icon*/
+.fa-angle-left {
+  font-size: 10vh;
+  bottom: 40vh;
+  left: -80vh;
+  z-index: 99;
+  color: #686963;
+  position: relative;
+  transition: all ease 0.3s;
+}
+
+/*right icon*/
+.fa-angle-right {
+  font-size: 10vh;
+  bottom: 40vh;
+  left: 80vh;
+  z-index: 99;
+  color: #686963;
+  position: relative;
+  transition: all ease 0.3s;
+}
+
+/*left and right icons upon hover*/
+.fa-angle-right:hover,
+.fa-angle-left:hover {
+  color: #d90479;
+  cursor: pointer;
+  animation: jello;
+  animation-duration: 2s;
+}
+
+/*test section----------------
+-----------------------------*/
+
+.section-test {
+  background-color: #d90479;
+}
+
+iframe {
+  border: none;
+  max-width: 100%;
+  margin: 0;
+  width: 800px;
+  height: 500px;
+}
+/*test holder*/
+#test-box {
+  width: 100%;
+  height: 76%;
+  text-align: center;
+  margin-top: 16vh;
+}
+
+/*main -top test header*/
+#test-header {
+  color: #f6e8ea;
+  font-weight: 600;
+  font-size: 7vw;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: -8%;
+  left: 1%;
+}
+
+/* SCREEN 5 REVIEWS-------------
+------------------------------*/
+.review {
+  background-color: rgba(1, 17, 38, 0.8);
+}
+
+/*main -top review header*/
+#review-header {
+  color: #f6e8ea;
+  font-weight: 600;
+  font-size: 7vw;
+  position: absolute;
+  width: 100%;
+  top: -5%;
+  left: 1%;
+  text-align: center;
+}
+/*GLider adapted from tutorial
+Creating Sliders And Carousels With Glider.Js (Only 2.5Kb Gzipped!). 2018. Video. 
+https://www.youtube.com/watch?v=FT9e8EQi8ys.*/
+
+/*the wording*/
+figure {
+  background-color: #f6e8ea;
+  display: block;
+  margin: 1.5em;
+  padding: 0.7em;
+}
+
+blockquote {
+  padding: 0.5em;
+  font-size: 1.3em;
+  font-style: italic;
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+}
+
+blockquote img {
+  border-radius: 50%;
+  width: 22vh;
+  height: 22vh;
+  display: block;
+  margin-top: -2vh;
+  margin-bottom: 2.5vh;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: grey;
+}
+
+.glider-contain {
+  width: 85% !important;
+  margin-top: 12%;
+  bottom: 5%;
+}
+
+.glider-next {
+  right: -50px;
+  top: 50%;
+}
+
+.glider-prev {
+  left: -40px;
+  top: 50%;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  opacity: 0.7;
+  transition: ease 0.3s;
+}
+
+.fa:hover {
+  color: #d90479;
+  animation: jello;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+/*footer page---------------
+--------------------------*/
+
+/*footer background*/
+.footer-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  /*image made more opaque so doesnt need opacity over*/
+  background: url("/images/opaqumind-walk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/*footer title*/
+.footer-header {
+  color: #011126;
+  font-weight: 600;
+  font-size: 10vw;
+  position: absolute;
+  width: 100%;
+  top: -17%;
+  left: 1%;
+}
+
+/*footer smaller h2*/
+.footer-h2 {
+  color: #011126;
+  font-size: 3.5vw;
+  top: 18%;
+  left: 1.25%;
+  position: relative;
+}
+
+/*footer box in middle of page*/
+#box-foot {
+  /*opacity with rgba value so text can be seen on top*/
+  background-color: rgba(1, 17, 38, 0.3);
+  width: 90%;
+  height: 45%;
+  margin-top: 12%;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+/*header inside the footer box*/
+.footer-h3 {
+  color: #011126;
+  font-size: 4vw;
+  margin: 15px;
+  padding-top: 30px;
+  top: 5px;
+  left: 2.25%;
+}
+
+/* styling form inputs*/
+#box-foot input,
+#signUpBtn {
+  font-size: 2vw;
+  background-color: #f6e8ea;
+  margin-left: 15px;
+  border-radius: 20px;
+  border: 1px solid #f6e8ea;
+  opacity: 0.6;
+  width: 29%;
+  padding: 10px;
+  margin-top: 3px;
+  transition: 0.3s ease-in-out all;
+  font-family: "Abel", "sans-serif";
+}
+
+/*email should be around double width of other elements*/
+#box-foot #email {
+  width: 59.5%;
+  color: #011126;
+}
+
+#signUpBtn {
+  width: 15%;
+  background-color: #d90479;
+  border: 1px solid #d90479;
+  color: #f6e8ea;
+  font-family: "Abel", "sans-serif";
+  transition: all 0.3s ease-in-out;
+}
+
+#sign-up-btn ::part(label) {
+  color: #d90479;
+}
+
+#box-foot:hover {
+  background-color: rgba(1, 17, 38, 0.4);
+}
+
+#signUpHidden {
+  display: none;
+  width: 15%;
+  background-color: #d90479;
+  border: 1px solid #d90479;
+  color: #f6e8ea;
+  font-family: "Abel", "sans-serif";
+  transition: all 0.3s ease-in-out;
+}
+
+.hideSignUp {
+  display: none;
+}
+
+#signUpBtn:hover {
+  background-color: #ff9f1c;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  color: #011126;
+  transform: scale(1.1);
+  /*box shadow adapted from 
+  "CSS Box Shadow". 2021. W3schools.Com. https://www.w3schools.com/css/css3_shadows_box.asp.
+  */
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*bottom footer*/
+#bottom-footer {
+  /*will be forced to the bottom of the page at all times*/
+  position: absolute;
+  /*stick to the bottom*/
+  bottom: 0px;
+  /*full width*/
+  width: 100%;
+  height: 10%;
+  background-color: #011126;
+}
+
+/*div that icons are in style*/
+#bott-foot-h2 div {
+  margin-left: 163vh;
+  padding-bottom: 20px;
+  margin-top: -26px;
+  display: block;
+}
+
+/*bottom footer h2*/
+#bott-foot-h2 {
+  color: #f6e8ea;
+  padding: 20px;
+}
+
+/*shoelace icons styling*/
+sl-icon {
+  font-size: 5vh;
+  color: #f6e8ea;
+  margin-left: 3vh;
+  transition: 0.3s ease;
+}
+sl-icon:hover {
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+svg {
+  display: none;
+  margin-left: 126vh;
+  margin-top: -9vh;
+}
+
+.svgDisplay {
+  display: block;
+}
+
+/*MEDIA QUERIES---------
+----------------------*/
+@media only screen and (max-width: 1150px) {
+  /*SCREEN 3 - SLIDER ---------*/
+
+  /*right circle*/
+  .crcl-right {
+    height: 88vh;
+    width: 250px;
+    background-color: #f6e8ea;
+    border-radius: 0%;
+    z-index: 1;
+    position: absolute;
+    top: -9vh;
+    left: -10vh;
+  }
+
+  /*circle right paragrah*/
+  .crcl-right p {
+    margin-top: 10.4vh;
+    margin-left: 7vh;
+    font-size: 2.65vh;
+    text-align: left;
+    line-height: 21pt;
+    color: #333;
+  }
+
+  /*right circle outline*/
+  .crcl-right-outline {
+    display: none;
+  }
+
+  /*semi circle left outline*/
+  .crcle-left-outline {
+    display: none;
+  }
+
+  /*left semi circle*/
+  .crcle-left {
+    display: none;
+  }
+
+  /*header text*/
+  .content .slide-ttle {
+    z-index: 1;
+    color: #686963;
+    font-weight: 600;
+    font-size: 9.3vw;
+    bottom: -67vh;
+    position: relative;
+    text-align: center;
+  }
+
+  /* slide backgrounds*/
+  #slide-img-hold,
+  #slide-img-hold-jog,
+  #slide-img-hold-friends,
+  #slide-img-hold-rest {
+    top: 43vh;
+    width: 155vh;
+  }
+
+  /*left icon*/
+  .fa-angle-left {
+    bottom: -43vh;
+    left: -75vh;
+  }
+
+  /*right icon*/
+  .fa-angle-right {
+    bottom: -43vh;
+    left: 75vh;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  /*SLIDER SCREEN #3-------*/
+  /*left icon*/
+  .fa-angle-left {
+    bottom: -46vh;
+    left: -62vh;
+  }
+
+  /*right icon*/
+  .fa-angle-right {
+    bottom: -46vh;
+    left: 62vh;
+  }
+
+  /*header text*/
+  .content .slide-ttle {
+    font-size: 8.8vw;
+  }
+
+  #slide-img-hold,
+  #slide-img-hold-jog,
+  #slide-img-hold-friends,
+  #slide-img-hold-rest {
+    top: 42vh;
+    width: 140vh;
+  }
+}
+/*tablet size*/
+@media only screen and (max-width: 768px) {
+  /*SCREEN 1 HOME ----------------
+  -----------------------------*/
+  /*menu hamburger*/
+  .fa-bars {
+    color: #ff9f1c;
+  }
+
+  /*title in home page*/
+  .home-title {
+    bottom: 0;
+    top: 40.5vh;
+  }
+
+  /*image in back of home screen*/
+  #home-fit-image {
+    top: -7%;
+    height: 109%;
+    left: -25%;
+    /*Center and scale the image */
+    background-position: left;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    opacity: 0.9;
+    position: absolute;
+  }
+
+  /*SCREEN 2 REASONS------------
+  ----------------------------*/
+
+  /*background img reason section change photo due 
+  to other photo being too large for tablet size*/
+  .section-rsn .bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    background: url("/images/tabletScreen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*page 2 title*/
+  .reasons-title {
+    font-size: 10vw;
+    top: -10vh;
+  }
+  /*circle pulse middle part */
+  .circle {
+    height: 25px;
+    width: 25px;
+  }
+
+  /*circle pulse height and width changes*/
+  .circle-outline {
+    height: 35px;
+    width: 35px;
+  }
+
+  sl-tooltip::part(base) {
+    font-size: 2.04vh;
+  }
+
+  /*where the circles are positioned*/
+
+  /*specific spot for bottom circle*/
+
+  /*circle by rasberry*/
+  #rasberry-1,
+  #rasberry-2,
+  #rasberry-3,
+  #rasberry-4 {
+    left: 70vh;
+  }
+
+  /*circle changed to be by mandarins*/
+  #shake-1,
+  #shake-2,
+  #shake-3,
+  #shake-4 {
+    left: 40vh;
+  }
+
+  /*SCREEN 3 SLIDER -----------------
+  ----------------------------------*/
+
+  /*sets the background images slider section*/
+  #slide-img-hold,
+  #slide-img-hold-jog,
+  #slide-img-hold-friends,
+  #slide-img-hold-rest {
+    top: 35vh;
+    width: 110vh;
+  }
+
+  /*header text*/
+  .content .slide-ttle {
+    font-size: 7.8vw;
+    text-align: center !important;
+    bottom: -71vh;
+  }
+
+  /*left icon*/
+  .fa-angle-left {
+    bottom: -55vh;
+    left: -40vh;
+    font-size: 8vh;
+  }
+
+  /*right icon*/
+  .fa-angle-right {
+    bottom: -55vh;
+    left: 40vh;
+    font-size: 8vh;
+  }
+
+  /*SCREEN 4 TEST SECTION --------------*/
+
+  /*header of test section*/
+  #test-header {
+    font-size: 7vw;
+    top: -5%;
+    left: 1%;
+  }
+
+  iframe {
+    max-width: 80%;
+    margin-top: -5vh;
+  }
+
+  /*SCREEN 5 USER REVIEWS-------------------*/
+
+  /*main -top review header*/
+  #review-header {
+    top: -3%;
+    left: 1%;
+  }
+
+  /*the container of all quotes*/
+  .glider-contain {
+    margin-top: 17%;
+    bottom: 5%;
+  }
+
+  /*text*/
+  blockquote {
+    padding: 0em;
+    font-size: 1em;
+  }
+
+  /*image bw*/
+  blockquote img {
+    border-radius: 50%;
+    width: 15vh;
+    height: 15vh;
+    display: block;
+    margin-top: -2vh;
+    margin-bottom: 2.5vh;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*SCREEN 6 FOOTER -----------------------*/
+
+  sl-icon {
+    margin-left: 2.1vh;
+    font-size: 4.04vh;
+  }
+
+  /*div that icons are in style*/
+  #bott-foot-h2 div {
+    margin-left: 80vh;
+    padding-bottom: 30px;
+    margin-top: -3.5vh;
+    display: block;
+  }
+  /*bottom-most footer h2*/
+  #bott-foot-h2 {
+    padding: 17px;
+    margin-left: 7px;
+    font-size: 3.5vh;
+  }
+
+  /*footer smaller h2*/
+  .footer-h2 {
+    top: 15vh;
+    left: 2vh;
+  }
+
+  /*footer box in middle of page*/
+  #box-foot {
+    width: 110vh;
+    height: 37vh;
+    top: 9.5vh;
+  }
+
+  /*header inside the footer box*/
+  .footer-h3 {
+    margin: 15px;
+    padding-top: 3.3vh;
+    left: 2vh;
+  }
+
+  /*footer title*/
+  .footer-header {
+    top: -7vh;
+    left: 2vh;
+  }
+
+  /*svg*/
+  svg {
+    display: none;
+    margin-left: 75vh;
+    margin-top: -7vh;
+  }
+}
+
+/*iPhone screen media queries*/
+@media only screen and (max-width: 414px) {
+  /*SCREEN 1 HOME ----------------
+  -----------------------------*/
+  /*menu hamburger*/
+  .fa-bars {
+    color: #ff9f1c;
+  }
+
+  /*title in home page*/
+  .home-title {
+    font-size: 18vw;
+    top: 45.5vh;
+  }
+
+  /*logo hfstyle*/
+  #logo-home {
+    width: 8vh;
+    height: 8vh;
+  }
+
+  /*menu headings style*/
+  .menu-titles {
+    font-size: 3vh;
+  }
+
+  /*image in back of home screen*/
+  #home-fit-image {
+    top: -5%;
+    height: 109%;
+    left: -125%;
+    /*Center and scale the image */
+    background-position: left;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    opacity: 0.9;
+    position: absolute;
+  }
+
+  /*SCREEN 2 REASONS------------
+  ----------------------------*/
+
+  /*background img reason section change photo due 
+  to other photo being too large for tablet size*/
+  .section-rsn .bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    background: url("/images/mobileScreen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*page 2 title*/
+  .reasons-title {
+    font-size: 13vw;
+    top: -5vh;
+  }
+
+  /*the tooltip style*/
+  sl-tooltip::part(base) {
+    font-size: 1.9vh;
+  }
+
+  /*where the circles are positioned*/
+
+  /*circle by rasberry*/
+  #rasberry-1,
+  #rasberry-2,
+  #rasberry-3,
+  #rasberry-4 {
+    left: 20vh;
+  }
+
+  /*circle changed to be by mandarins*/
+  #shake-1,
+  #shake-2,
+  #shake-3,
+  #shake-4 {
+    left: 40vh;
+  }
+
+  /*bottom circles*/
+  #bottom-1,
+  #bottom-2,
+  #bottom-3,
+  #bottom-4 {
+    left: 10.8vh;
+  }
+
+  /*SCREEN 3 SLIDER -----------------
+  ----------------------------------*/
+
+  /*second slide background*/
+  #slide-img-hold-jog {
+    background: url("/images/exercise-by-beachiPhone.png.jpg");
+  }
+
+  /*third slide background -friends*/
+  #slide-img-hold-friends {
+    background: url("/images/friendsIphoneOpt.png.jpg");
+  }
+
+  /*fourth slide background-rest*/
+  #slide-img-hold-rest {
+    background: url("/images/clock@bediPhone.png");
+  }
+
+  /*styles img holder div - first slide*/
+  #slide-img-hold {
+    background: url("/images/breakfastiPhone.png.jpg");
+  }
+
+  /*sets the background images slider section*/
+  #slide-img-hold,
+  #slide-img-hold-jog,
+  #slide-img-hold-friends,
+  #slide-img-hold-rest {
+    top: 16vh;
+    width: 50vh;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    text-align: center;
+    height: 78vh;
+    margin-top: -5.25%;
+    margin-left: 1%;
+  }
+
+  /*display the dialog*/
+  sl-dialog {
+    display: block;
+  }
+
+  /*specifics for the dialog box style*/
+  #slide-img-hold-friends sl-dialog::part(panel),
+  #slide-img-hold-jog sl-dialog::part(panel) {
+    margin-left: -56vh;
+    margin-top: -13vh;
+    width: 20%;
+  }
+
+  /*specifics for the dialog box style*/
+  #slide-img-hold-friends sl-dialog::part(panel) {
+    margin-left: 56vh;
+    margin-top: -3vh;
+    width: 20%;
+  }
+
+  /*specifics for the dialog box style*/
+  #slide-img-hold-rest sl-dialog::part(panel) {
+    margin-left: 170vh;
+    margin-top: -13vh;
+    width: 20%;
+  }
+
+  /*the popup style*/
+  #dialog-popup {
+    display: block;
+    text-align: left;
+    top: 5%;
+    right: 5%;
+    color: #d90479;
+  }
+
+  /*styles shoelace button in menu*/
+
+  #dialog-popup::part(close-button) {
+    color: #686963;
+    font-family: "Abel", sans-serif;
+    transition: ease 0.3s;
+  }
+
+  #close-dialog ::part(base) {
+    color: #686963;
+    background-color: #d90479;
+  }
+
+  /*styles shoelace button in menu hover state*/
+  #dialog-popup::part(close-button):hover {
+    background: #d90479;
+    border: solid 1px #d90479;
+  }
+
+  /*the buttons*/
+  #laughter-pg-btn,
+  .content .read-more-btn,
+  .content .read-jog-btn {
+    display: block;
+    margin-top: 77vh;
+  }
+
+  .content .read-jog-btn {
+    display: block;
+    margin-top: 17vh !important;
+    color: #686963;
+  }
+
+  /*header text*/
+  .content .slide-ttle {
+    font-size: 7.8vw;
+    bottom: -76vh;
+  }
+
+  /*left icon */
+  .fa-angle-left {
+    display: none;
+  }
+
+  /*right icon*/
+  .fa-angle-right {
+    display: none;
+  }
+
+  /*right circle*/
+  .crcl-right {
+    display: none;
+  }
+
+  /*circle right paragrah*/
+  .crcl-right p {
+    display: none;
+  }
+
+  /*SCREEN 4 TEST SECTION ---------------
+  ----------------------------------*/
+
+  /*header of test section*/
+  #test-header {
+    font-size: 10vw;
+    top: -1%;
+    left: 1%;
+  }
+
+  /*SCREEN 5 USER REVIEWS---------------
+  ------------------------------------*/
+
+  /*main -top review header*/
+  #review-header {
+    top: -1%;
+    left: 1%;
+    font-size: 10vw;
+  }
+
+  /*the container of all quotes*/
+  .glider-contain {
+    margin-top: 17%;
+    bottom: 5%;
+  }
+
+  /*text*/
+  blockquote {
+    padding: 0em;
+    font-size: 1em;
+  }
+
+  /*image bw*/
+  blockquote img {
+    border-radius: 50%;
+    width: 15vh;
+    height: 15vh;
+    display: block;
+    margin-top: -2vh;
+    margin-bottom: 2.5vh;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*SCREEN 6 FOOTER -----------------------*/
+
+  /*footer background*/
+  .footer-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    /*image made more opaque so doesnt need opacity over*/
+    background: url("/images/iPhoneFooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+
+  /*footer title*/
+  .footer-header {
+    top: -2vh;
+    font-size: 10vw;
+  }
+
+  /*footer h2*/
+  .footer-h2 {
+    top: 9vh;
+    font-size: 4.9vw;
+    font-weight: 600;
+  }
+
+  /*icons for social media*/
+  sl-icon {
+    margin-left: 1vh;
+    font-size: 3.04vh;
+  }
+
+  /*div that icons are in style*/
+  #bott-foot-h2 div {
+    margin-left: 30vh;
+    padding-bottom: 29px;
+  }
+
+  /*bottom-most footer h2*/
+  #bott-foot-h2 {
+    font-size: 3vh;
+  }
+
+  /*footer box in middle of page*/
+  #box-foot {
+    width: 50vh;
+    height: 40vh;
+    top: 16.5vh;
+  }
+
+  /*header inside the footer box*/
+  .footer-h3 {
+    font-size: 4vh;
+  }
+
+  /* styling form inputs*/
+  #box-foot input,
+  #signUpBtn {
+    font-size: 4vw;
+    width: 35%;
+  }
+
+  /*email should be around double width of other elements*/
+  #box-foot #email {
+    width: 72%;
+  }
+
+  #signUpBtn {
+    width: 25%;
+    margin-top: 20px;
+  }
+
+  /*svg*/
+  svg {
+    margin-left: 5vh;
+    margin-top: 4vh;
+  }
+}
